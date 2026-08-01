@@ -49,7 +49,7 @@ def test_duplicate_signup_returns_400(client):
     )
 
     assert response.status_code == 400
-    assert response.json()["detail"] == "Student already signed up for this activity"
+    assert response.json()["detail"] == "Student is already signed up"
 
 
 def test_unregister_participant_removes_email(client):
